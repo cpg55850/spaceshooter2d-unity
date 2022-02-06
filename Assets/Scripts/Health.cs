@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
     public int health;
     public GameObject deathPrefab;
 
-    public void TakeDamage(int amount)
+    public virtual void TakeDamage(int amount)
     {
         FindObjectOfType<AudioManager>().Play("Hit");
         StartCoroutine(FlashRed());

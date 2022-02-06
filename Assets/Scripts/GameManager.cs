@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public Text scoreText;
+    public Text healthText;
+    public GameObject player;
     public float minX, maxX, minY, maxY;
     public int score = 0;
 
@@ -17,6 +19,12 @@ public class GameManager : MonoBehaviour
     }
 
     void Start()
+    {
+        initializeScreenBoundVariables();
+        drawHealth(player.GetComponent<Health>().health);
+    }
+
+    public void initializeScreenBoundVariables()
     {
         float camDistance = Vector3.Distance(transform.position, Camera.main.transform.position);
         Vector2 bottomCorner = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, camDistance));
@@ -33,5 +41,17 @@ public class GameManager : MonoBehaviour
         score += amount;
         scoreText.text = score.ToString();
         Debug.Log("Score: " + score);
+    }
+
+    public void drawHealth(int health)
+    {
+        string healthString = "";
+        for(int i = 0; i < health; i++)
+        {
+            healthString += "* ";
+        }
+
+        Debug.Log(healthString);
+        healthText.text = healthString;
     }
 }
