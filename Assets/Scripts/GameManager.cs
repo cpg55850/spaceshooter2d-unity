@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-
+    public Text scoreText;
     public float minX, maxX, minY, maxY;
     public int score = 0;
+
 
     void Awake()
     {
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseScore(int amount)
     {
         score += amount;
+        scoreText.text = score.ToString();
         Debug.Log("Score: " + score);
     }
 }
