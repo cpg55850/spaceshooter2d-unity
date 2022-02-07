@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 6919962331352706345}
   - component: {fileID: 7700793063937584170}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyTwo
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,7 +110,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d52ea3c1e7c47e8428498481ed56de5e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ffe59569465ffd9489e3e738656b541e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -166,9 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa73f48f6e9b194e814f31431c2d48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 8
   damage: 1
-  bounceOnY: 1
+  bounceOnY: 0
 --- !u!114 &3154771933977356614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 008c36ca8cc67494a878bbfa23e158fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 1
   deathPrefab: {fileID: 3802571911816236694, guid: 21f44fc01bc43e841a049a517a472481, type: 3}
   points: 5
 --- !u!114 &5241357154020081346
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5236034085455870036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19c9530051bf3dd4a869484dcac6baeb, type: 3}
   m_Name: 
@@ -341,7 +341,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5236034085455870036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 779c9b4b5678879418e21842fbc6ee24, type: 2}
   m_CullingMode: 0

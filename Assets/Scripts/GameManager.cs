@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour
     {
         score += amount;
         scoreText.text = score.ToString();
-        Debug.Log("Score: " + score);
     }
 
     public void drawHealth(int health)

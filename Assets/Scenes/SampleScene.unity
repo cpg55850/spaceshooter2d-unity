@@ -650,8 +650,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3466e36b8a3527c4fa3f06a090e4db21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5236034085455870036, guid: a5a6c6974e909ce48a5efcdbddd4f77a, type: 3}
-  respawnTime: 0.8
+  enemies:
+  - {fileID: 5236034085455870036, guid: 02932d39c873dd04ea6f6ed80b67edc6, type: 3}
+  - {fileID: 5236034085455870036, guid: a5a6c6974e909ce48a5efcdbddd4f77a, type: 3}
+  respawnTime: 1
 --- !u!114 &1230893325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,7 +730,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1440274291
 PrefabInstance:
@@ -739,7 +741,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3533928678841648260, guid: b29e8c2deb31f91478599552e940fcd6, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3533928678841648260, guid: b29e8c2deb31f91478599552e940fcd6, type: 3}
       propertyPath: m_LocalPosition.x
