@@ -21,7 +21,15 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         initializeScreenBoundVariables();
-        drawHealth(player.GetComponent<Health>().health);
+        //drawHealth(player.GetComponent<Health>().health);
+    }
+
+    private void Update()
+    {
+        if(player)
+        {
+            drawHealth(player.GetComponent<Health>().health);
+        }
     }
 
     public void initializeScreenBoundVariables()

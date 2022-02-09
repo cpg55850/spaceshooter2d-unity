@@ -68,7 +68,7 @@ public class EnemySpawner : MonoBehaviour
             }
         }
 
-        Debug.Log(currentEnemy + " " + randEnemy);
+        //Debug.Log(currentEnemy + " " + randEnemy);
 
         objectWidth = currentEnemy.transform.GetComponent<SpriteRenderer>().bounds.size.x;
         objectHeight = currentEnemy.transform.GetComponent<SpriteRenderer>().bounds.size.y;

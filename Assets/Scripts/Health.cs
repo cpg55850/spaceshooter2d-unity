@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public int health;
+    public int maxHealth;
     public GameObject deathPrefab;
 
     public virtual void TakeDamage(int amount)
@@ -14,6 +15,11 @@ public class Health : MonoBehaviour
         health -= amount;
         if (health <= 0)
             Die();
+    }
+
+    public void addHealth(int amount)
+    {
+        health = Mathf.Min(health + amount, maxHealth);
     }
 
     public virtual void Die()
