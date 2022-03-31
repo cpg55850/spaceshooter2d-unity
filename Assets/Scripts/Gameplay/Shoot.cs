@@ -10,6 +10,7 @@ public class Shoot : MonoBehaviour
     private float attackTimerMax;
     private bool canAttack;
     public bool autoShoot;
+    public bool poweredUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,12 @@ public class Shoot : MonoBehaviour
                 attackTimerValue = 0f;
 
                 Instantiate(myLaser, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+
+                if (poweredUp)
+                {
+                    Instantiate(myLaser, bulletSpawn.transform.position + new Vector3(0f, -1f), bulletSpawn.transform.rotation);
+                    Instantiate(myLaser, bulletSpawn.transform.position + new Vector3(0f, 1f), bulletSpawn.transform.rotation);
+                }
             }
 
         }

@@ -32,8 +32,9 @@ public class Health : MonoBehaviour
     public IEnumerator FlashRed()
     {
         SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
+        Color startColor = sprite.color;
         sprite.color = Color.red;
         yield return new WaitForSeconds(0.1f);
-        sprite.color = Color.white;
+        sprite.color = startColor;
     }
 }

@@ -58,7 +58,6 @@ public class GameManager : MonoBehaviour
             healthString += "* ";
         }
 
-        Debug.Log(healthString);
         healthText.text = healthString;
     }
 }

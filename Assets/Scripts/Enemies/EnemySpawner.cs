@@ -43,21 +43,40 @@ public class EnemySpawner : MonoBehaviour
         {
             if (randEnemy > 40f)
             {
-                currentEnemy = enemies[1];
+                if (Random.Range(0, 2) == 0)
+                    currentEnemy = enemies[1];
+                else
+                    currentEnemy = enemies[2];
             }
         }
         else if (GameManager.Instance.score >= 300)
         {
             if (randEnemy > 50f)
             {
-                currentEnemy = enemies[1];
+                if (Random.Range(0, 2) == 0)
+                    currentEnemy = enemies[1];
+                else
+                    currentEnemy = enemies[2];
             }
         }
         else if (GameManager.Instance.score >= 200)
         {
             if (randEnemy > 65f)
             {
-                currentEnemy = enemies[1];
+                if (Random.Range(0, 2) == 0)
+                    currentEnemy = enemies[1];
+                else
+                    currentEnemy = enemies[2];
+            }
+        }
+        else if (GameManager.Instance.score >= 100)
+        {
+            if (randEnemy > 75f)
+            {
+                if (Random.Range(0, 2) == 0)
+                    currentEnemy = enemies[1];
+                else
+                    currentEnemy = enemies[2];
             }
         }
         else if (GameManager.Instance.score >= 50)

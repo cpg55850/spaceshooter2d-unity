@@ -11,7 +11,7 @@ public class EnemyController : MonoBehaviour
     public bool bounceOnY;
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         objectWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x;
         objectHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y;
@@ -30,7 +30,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void MoveEnemy()
+    public virtual void MoveEnemy()
     {
         transform.Translate(-speed * Time.deltaTime, 0, 0);
     }
@@ -46,7 +46,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.GetComponent<Health>() != null && !other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<Health>().TakeDamage(damage);
             gameObject.GetComponent<Health>().Die();
