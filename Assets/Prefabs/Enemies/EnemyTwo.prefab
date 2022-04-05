@@ -186,7 +186,9 @@ MonoBehaviour:
   deathPrefab: {fileID: 3802571911816236694, guid: 21f44fc01bc43e841a049a517a472481, type: 3}
   points: 5
   canDropItem: 1
-  droppableItem: {fileID: 7125311741611092510, guid: cc81fb986930c4244a666c4c4c8099ab, type: 3}
+  droppableItems:
+  - {fileID: 7125311741611092510, guid: cc81fb986930c4244a666c4c4c8099ab, type: 3}
+  - {fileID: 7928227461889901995, guid: e1758637fc1ffd04cbc78d70b2f9fd86, type: 3}
   dropPercentage: 5
 --- !u!114 &5241357154020081346
 MonoBehaviour:
@@ -220,6 +222,7 @@ MonoBehaviour:
   bulletSpawn: {fileID: 575098774304397941}
   attackTimerValue: 1.75
   autoShoot: 1
+  poweredUp: 0
 --- !u!50 &-7268023612559647867
 Rigidbody2D:
   serializedVersion: 4
@@ -345,9 +348,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5236034085455870036}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 779c9b4b5678879418e21842fbc6ee24, type: 2}
+  m_Controller: {fileID: 9100000, guid: f77f03a25b67cce4096b706a73d3a00a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

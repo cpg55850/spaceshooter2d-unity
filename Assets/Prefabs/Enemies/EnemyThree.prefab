@@ -189,7 +189,9 @@ MonoBehaviour:
   deathPrefab: {fileID: 3802571911816236694, guid: 21f44fc01bc43e841a049a517a472481, type: 3}
   points: 5
   canDropItem: 1
-  droppableItem: {fileID: 7125311741611092510, guid: cc81fb986930c4244a666c4c4c8099ab, type: 3}
+  droppableItems:
+  - {fileID: 7125311741611092510, guid: cc81fb986930c4244a666c4c4c8099ab, type: 3}
+  - {fileID: 7928227461889901995, guid: e1758637fc1ffd04cbc78d70b2f9fd86, type: 3}
   dropPercentage: 5
 --- !u!114 &5241357154020081346
 MonoBehaviour:

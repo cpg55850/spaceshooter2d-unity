@@ -11,11 +11,12 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public float minX, maxX, minY, maxY;
     public int score = 0;
-
+    public CameraShake cameraShake;
 
     void Awake()
     {
         Instance = this;
+        cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
     }
 
     void Start()
@@ -30,6 +31,11 @@ public class GameManager : MonoBehaviour
         {
             drawHealth(player.GetComponent<Health>().health);
         }
+    }
+
+    public void ShakeCamera(float duration, float magnitude)
+    {
+        StartCoroutine(cameraShake.Shake(duration, magnitude));
     }
 
     public void initializeScreenBoundVariables()

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public abstract class PowerUp : MonoBehaviour
 {
-    public int secondsToDespawn;
+    public int secondsToDespawn = 10;
 
     private void Start()
     {
-        StartCoroutine(Disappear(secondsToDespawn));
+        Invoke("Exit", secondsToDespawn);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,12 +20,11 @@ public abstract class PowerUp : MonoBehaviour
     }
 
     public virtual void Pickup(Collider2D player) {
-        Destroy(gameObject);
+        Exit();
     }
 
-    IEnumerator Disappear(int secondsToDespawn)
+    public virtual void Exit()
     {
-        yield return new WaitForSeconds(secondsToDespawn);
         Destroy(gameObject);
     }
 }
