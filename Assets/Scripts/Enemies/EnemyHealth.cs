@@ -10,11 +10,6 @@ public class EnemyHealth : Health
     public float dropPercentage = 5f;
     public CameraShake cameraShake;
 
-    public void Start()
-    {
-        cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
-    }
-
     public override void Die()
     {
         base.Die();

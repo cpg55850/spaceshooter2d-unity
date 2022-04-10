@@ -216,9 +216,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83f1b6b82c7d122419d8920886b34be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  maxHealth: 5
+  health: 10
+  maxHealth: 10
   deathPrefab: {fileID: 3802571911816236694, guid: 21f44fc01bc43e841a049a517a472481, type: 3}
+  hitFlashTime: 0.5
 --- !u!114 &5933356092291151897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +234,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myLaser: {fileID: 3335730642461501842, guid: 20fb6b531fb18b94c849dcc5b5084da4, type: 3}
   bulletSpawn: {fileID: 3533928677700735087}
-  attackTimerValue: 0.25
+  attackTimerValue: 0.1
   autoShoot: 0
   poweredUp: 0

@@ -169,9 +169,10 @@ MonoBehaviour:
   speed: 5
   damage: 1
   bounceOnY: 0
-  frequency: 5
-  magnitude: 5
+  frequency: 0.8
+  magnitude: 5.47
   offset: 0
+  reverseDirection: 0
 --- !u!114 &3154771933977356614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +194,7 @@ MonoBehaviour:
   - {fileID: 7125311741611092510, guid: cc81fb986930c4244a666c4c4c8099ab, type: 3}
   - {fileID: 7928227461889901995, guid: e1758637fc1ffd04cbc78d70b2f9fd86, type: 3}
   dropPercentage: 5
+  cameraShake: {fileID: 0}
 --- !u!114 &5241357154020081346
 MonoBehaviour:
   m_ObjectHideFlags: 0

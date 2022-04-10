@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public Text scoreText;
     public Text healthText;
+    public Text waveText;
+    public float waveTextDuration = 1f;
     public GameObject player;
     public float minX, maxX, minY, maxY;
     public int score = 0;
@@ -65,5 +67,12 @@ public class GameManager : MonoBehaviour
         }
 
         healthText.text = healthString;
+    }
+
+    public IEnumerator drawWave(string wave)
+    {
+        waveText.text = wave;
+        yield return new WaitForSeconds(waveTextDuration);
+        waveText.text = "";
     }
 }
