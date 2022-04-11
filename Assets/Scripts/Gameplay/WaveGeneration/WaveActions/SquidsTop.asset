@@ -18,25 +18,25 @@ MonoBehaviour:
   prefab: {fileID: 5236034085455841192, guid: 02932d39c873dd04ea6f6ed80b67edc6, type: 3}
   spawnCount: 2
   enemies:
-  - prefab: {fileID: 5236034085455841192, guid: 02932d39c873dd04ea6f6ed80b67edc6, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
     yPos: 6
     delay: 0
-  - prefab: {fileID: 5236034085455841192, guid: 02932d39c873dd04ea6f6ed80b67edc6, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
     yPos: 5
     delay: 0.25
-  - prefab: {fileID: 5236034085455841192, guid: 02932d39c873dd04ea6f6ed80b67edc6, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
     yPos: 4
     delay: 0.25
-  - prefab: {fileID: 5236034085455841192, guid: 02932d39c873dd04ea6f6ed80b67edc6, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
     yPos: 3
     delay: 0.25
-  - prefab: {fileID: 5236034085455841192, guid: 02932d39c873dd04ea6f6ed80b67edc6, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
     yPos: 2
     delay: 0.25
-  - prefab: {fileID: 5236034085455841192, guid: 02932d39c873dd04ea6f6ed80b67edc6, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
     yPos: 1
     delay: 0.25
-  - prefab: {fileID: 5236034085455841192, guid: 02932d39c873dd04ea6f6ed80b67edc6, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
     yPos: 0
     delay: 0.25
   message: Basic Enemies
