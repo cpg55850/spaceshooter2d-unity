@@ -15,28 +15,28 @@ MonoBehaviour:
   name: Basic Enemies
   delay: 0.25
   enemyDelay: 0.25
-  prefab: {fileID: 5236034085455841192, guid: 02932d39c873dd04ea6f6ed80b67edc6, type: 3}
+  prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
   spawnCount: 2
   enemies:
-  - prefab: {fileID: 5236034085455841192, guid: 1e56ed78e1004c546bf57437153a650e, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
     yPos: -3
     delay: 0
-  - prefab: {fileID: 5236034085455841192, guid: 1e56ed78e1004c546bf57437153a650e, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
     yPos: -3
     delay: 0.25
-  - prefab: {fileID: 5236034085455841192, guid: 1e56ed78e1004c546bf57437153a650e, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
     yPos: -3
     delay: 0.25
-  - prefab: {fileID: 5236034085455841192, guid: 1e56ed78e1004c546bf57437153a650e, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
     yPos: -3
     delay: 0.25
-  - prefab: {fileID: 5236034085455841192, guid: 1e56ed78e1004c546bf57437153a650e, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
     yPos: -3
     delay: 0.25
-  - prefab: {fileID: 5236034085455841192, guid: 1e56ed78e1004c546bf57437153a650e, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
     yPos: -3
     delay: 0.25
-  - prefab: {fileID: 5236034085455841192, guid: 1e56ed78e1004c546bf57437153a650e, type: 3}
+  - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
     yPos: -3
     delay: 0.25
   message: Basic Enemies

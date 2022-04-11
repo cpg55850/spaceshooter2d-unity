@@ -40,6 +40,9 @@ public class Shoot : MonoBehaviour
 
                 Instantiate(myLaser, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
 
+                if(gameObject.tag == "Player") // only play shoot sound for player shooting
+                    FindObjectOfType<AudioManager>().Play("Shoot");
+
                 if (poweredUp)
                 {
                     Instantiate(myLaser, bulletSpawn.transform.position + new Vector3(0f, -1f), bulletSpawn.transform.rotation);

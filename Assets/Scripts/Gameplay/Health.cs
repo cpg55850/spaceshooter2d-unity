@@ -21,7 +21,10 @@ public class Health : MonoBehaviour
 
     public virtual void TakeDamage(int amount)
     {
-        FindObjectOfType<AudioManager>().Play("Hit");
+        if(gameObject.tag == "Enemy")
+            FindObjectOfType<AudioManager>().Play("Hit");
+        else if(gameObject.tag == "Player")
+            FindObjectOfType<AudioManager>().Play("Damage");
         StartCoroutine(FlashRed());
         health -= amount;
         if (health <= 0)

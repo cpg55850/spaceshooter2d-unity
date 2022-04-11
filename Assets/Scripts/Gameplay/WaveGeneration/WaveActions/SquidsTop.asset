@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Basic Enemies
   delay: 0.25
   enemyDelay: 0.1
-  prefab: {fileID: 5236034085455841192, guid: 02932d39c873dd04ea6f6ed80b67edc6, type: 3}
+  prefab: {fileID: 5236034085455841192, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
   spawnCount: 2
   enemies:
   - prefab: {fileID: 5236034085455841192, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
