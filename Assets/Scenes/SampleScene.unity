@@ -252,9 +252,14 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: Shoot
-    clip: {fileID: 8300000, guid: 02e2b0603d3556749bbadeffb095f6e2, type: 3}
-    volume: 0.417
+    clip: {fileID: 8300000, guid: bf52e51545d4d034ea687cb6d0a63600, type: 3}
+    volume: 0.283
     pitch: 1
+    source: {fileID: 0}
+  - name: Damage
+    clip: {fileID: 8300000, guid: 0ed4050b40be81a46af33a98077fe26f, type: 3}
+    volume: 0.677
+    pitch: 1.41
     source: {fileID: 0}
 --- !u!4 &133656369
 Transform:
@@ -860,15 +865,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230893321}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3466e36b8a3527c4fa3f06a090e4db21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 5236034085455870036, guid: 02932d39c873dd04ea6f6ed80b67edc6, type: 3}
-  - {fileID: 5236034085455870036, guid: a5a6c6974e909ce48a5efcdbddd4f77a, type: 3}
-  - {fileID: 5236034085455870036, guid: 1e56ed78e1004c546bf57437153a650e, type: 3}
+  - {fileID: 5236034085455870036, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
+  - {fileID: 5236034085455870036, guid: 299191055a78137418622fbde84a629e, type: 3}
+  - {fileID: 5236034085455870036, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
   respawnTime: 1
 --- !u!114 &1230893325
 MonoBehaviour:
@@ -889,7 +894,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230893321}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb0d5fe9d3e47274485e4e5c96f558fe, type: 3}
   m_Name: 

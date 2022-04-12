@@ -24,7 +24,11 @@ public class Health : MonoBehaviour
         if(gameObject.tag == "Enemy")
             FindObjectOfType<AudioManager>().Play("Hit");
         else if(gameObject.tag == "Player")
+        {
             FindObjectOfType<AudioManager>().Play("Damage");
+            GameManager.Instance.ShakeCamera(.25f, .25f);
+        }
+
         StartCoroutine(FlashRed());
         health -= amount;
         if (health <= 0)
