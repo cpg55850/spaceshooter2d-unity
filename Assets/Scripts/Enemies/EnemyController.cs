@@ -21,13 +21,13 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(bounceOnY)
-        {
-            MoveEnemyBounce();
-        } else
-        {
-            MoveEnemy();
-        }
+        //if(bounceOnY)
+        //{
+        //    MoveEnemyBounce();
+        //} else
+        //{
+        //    MoveEnemy();
+        //}
     }
 
     public virtual void MoveEnemy()

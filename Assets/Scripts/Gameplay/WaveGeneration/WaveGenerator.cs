@@ -41,7 +41,11 @@ public class WaveGenerator : MonoBehaviour
                                 yield return new WaitForSeconds(A.enemyDelay);
                             } else if(enemy.delay > 0)
                                 yield return new WaitForSeconds(A.enemies[i].delay);
-                            Instantiate(enemy.prefab, new Vector2(xPos, yPos), Quaternion.identity);
+                            GameObject o = (GameObject)Instantiate(enemy.prefab, new Vector2(xPos, yPos), Quaternion.identity);
+                            if(A.enemies[i].movementData != null)
+                                o.GetComponent<Movement>().movementData = A.enemies[i].movementData;
+                            else
+                                o.GetComponent<Movement>().movementData = A.movementData;
                         }
                     }
                     yield return null;  // prevents crash if all delays are 0

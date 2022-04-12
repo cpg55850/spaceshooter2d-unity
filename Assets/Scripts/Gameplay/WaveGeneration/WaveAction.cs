@@ -3,7 +3,8 @@ using UnityEngine;
 [System.Serializable]
 public class Enemy
 {
-    public Transform prefab;
+    public GameObject prefab;
+    public MovementData movementData;
     public float yPos;
     public float delay;
 }
@@ -11,11 +12,13 @@ public class Enemy
 [CreateAssetMenu(fileName = "New WaveAction", menuName = "Waves/WaveAction")]
 public class WaveAction : ScriptableObject
 {
+    public GameObject prefab;
+    public MovementData movementData;
     new public string name;
     public float delay;
     public float enemyDelay;
-    public Transform prefab;
     public int spawnCount;
     public Enemy[] enemies;
     public string message;
+
 }

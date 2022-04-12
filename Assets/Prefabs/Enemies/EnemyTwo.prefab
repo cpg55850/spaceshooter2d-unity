@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 5236034085455841195}
   - component: {fileID: 5236034085455841194}
   - component: {fileID: 5236034085455870037}
+  - component: {fileID: 673108378358296859}
   - component: {fileID: 3154771933977356614}
   - component: {fileID: 5241357154020081346}
   - component: {fileID: 6553614612497284339}
@@ -169,6 +170,19 @@ MonoBehaviour:
   speed: 8
   damage: 1
   bounceOnY: 0
+--- !u!114 &673108378358296859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5236034085455870036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3802ba474b6a82e4f8a593de6b229e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementData: {fileID: 0}
 --- !u!114 &3154771933977356614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +198,7 @@ MonoBehaviour:
   health: 1
   maxHealth: 0
   deathPrefab: {fileID: 3802571911816236694, guid: 21f44fc01bc43e841a049a517a472481, type: 3}
+  hitFlashTime: 0.4
   points: 5
   canDropItem: 1
   droppableItems:
