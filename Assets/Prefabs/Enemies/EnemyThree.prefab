@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4416167749071149077}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyBulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,13 +42,14 @@ GameObject:
   - component: {fileID: 5236034085455841195}
   - component: {fileID: 5236034085455841194}
   - component: {fileID: 8735098733450841376}
+  - component: {fileID: 1276858299332269190}
   - component: {fileID: 3154771933977356614}
   - component: {fileID: 5241357154020081346}
   - component: {fileID: 6553614612497284339}
   - component: {fileID: -7268023612559647867}
   - component: {fileID: 6919962331352706345}
   - component: {fileID: 7700793063937584170}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyThree
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -107,8 +108,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2052714393
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d52ea3c1e7c47e8428498481ed56de5e, type: 3}
   m_Color: {r: 0, g: 0.960912, b: 1, a: 1}
@@ -166,13 +167,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e970244ed6ed3b048ad4022db3e41c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   damage: 1
-  bounceOnY: 0
-  frequency: 0.8
-  magnitude: 5.47
-  offset: 0
-  reverseDirection: 0
+--- !u!114 &1276858299332269190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5236034085455870036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3802ba474b6a82e4f8a593de6b229e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementData:
+    type: 0
+    speed: 5
+    frequency: 1
+    magnitude: 5
+    offset: 5
 --- !u!114 &3154771933977356614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +201,7 @@ MonoBehaviour:
   health: 2
   maxHealth: 0
   deathPrefab: {fileID: 3802571911816236694, guid: 21f44fc01bc43e841a049a517a472481, type: 3}
+  hitFlashTime: 0.4
   points: 5
   canDropItem: 1
   droppableItems:

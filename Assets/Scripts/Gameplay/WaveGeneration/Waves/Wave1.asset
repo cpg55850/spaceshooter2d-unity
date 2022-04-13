@@ -13,6 +13,119 @@ MonoBehaviour:
   m_Name: Wave1
   m_EditorClassIdentifier: 
   waveName: Wave 1
+  message: Wave 1
+  prefab: {fileID: 5236034085455870036, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
+  enemyDelay: 0
+  movementData:
+    type: 0
+    speed: 5
+    frequency: 3
+    magnitude: 5
+    offset: 5
+  delay: 0
   waveActions:
-  - {fileID: 11400000, guid: 5bd22e076c00c204bb64b53e7d2a6638, type: 2}
-  - {fileID: 11400000, guid: e28940ecdbd507946ba958aaeb0cfbeb, type: 2}
+  - prefab: {fileID: 5236034085455870036, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
+    movementData:
+      type: 0
+      speed: 5
+      frequency: 1
+      magnitude: 5
+      offset: 0
+    name: 
+    delay: 0
+    enemyDelay: 0.55
+    speed: 0
+    yOffset: 0
+    spawnCount: 3
+    enemies:
+    - prefab: {fileID: 5236034085455870036, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
+      movementData:
+        type: 1
+        speed: 5
+        frequency: 1
+        magnitude: 5
+        offset: 0
+      yPos: 0
+      delay: 0
+    message: Basic Enemies
+  - prefab: {fileID: 5236034085455870036, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
+    movementData:
+      type: 1
+      speed: 5
+      frequency: 1
+      magnitude: 5
+      offset: 0
+    name: 
+    delay: 0
+    enemyDelay: 0.08
+    speed: 13.74
+    yOffset: 3.38
+    spawnCount: 4
+    enemies:
+    - prefab: {fileID: 5236034085455870036, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
+      movementData:
+        type: 0
+        speed: 13.74
+        frequency: 0
+        magnitude: 0
+        offset: 0
+      yPos: -3.28
+      delay: 0
+    - prefab: {fileID: 5236034085455870036, guid: 912a8bd8a6d6b47459bc2eeef7612b70, type: 3}
+      movementData:
+        type: 0
+        speed: 13.74
+        frequency: 1
+        magnitude: 5
+        offset: 0
+      yPos: -0.02
+      delay: 0
+    message: Dumb Enemies
+  - prefab: {fileID: 7928227461889901995, guid: e1758637fc1ffd04cbc78d70b2f9fd86, type: 3}
+    movementData:
+      type: 1
+      speed: 5
+      frequency: 1
+      magnitude: 5
+      offset: 0
+    name: 
+    delay: 0
+    enemyDelay: 0.08
+    speed: 13.74
+    yOffset: 0
+    spawnCount: 4
+    enemies:
+    - prefab: {fileID: 7928227461889901995, guid: e1758637fc1ffd04cbc78d70b2f9fd86, type: 3}
+      movementData:
+        type: 0
+        speed: 13.74
+        frequency: 0
+        magnitude: 0
+        offset: 0
+      yPos: 0
+      delay: 0
+    message: Hello Powerup
+  - prefab: {fileID: 7125311741611092510, guid: cc81fb986930c4244a666c4c4c8099ab, type: 3}
+    movementData:
+      type: 1
+      speed: 5
+      frequency: 1
+      magnitude: 5
+      offset: 0
+    name: 
+    delay: 0
+    enemyDelay: 0.08
+    speed: 13.74
+    yOffset: 0
+    spawnCount: 4
+    enemies:
+    - prefab: {fileID: 7125311741611092510, guid: cc81fb986930c4244a666c4c4c8099ab, type: 3}
+      movementData:
+        type: 1
+        speed: 13.74
+        frequency: 5
+        magnitude: 5
+        offset: 0
+      yPos: 0
+      delay: 0
+    message: HP???

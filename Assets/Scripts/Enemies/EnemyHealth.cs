@@ -14,7 +14,7 @@ public class EnemyHealth : Health
     {
         base.Die();
         GameManager.Instance.IncreaseScore(points);
-        GameManager.Instance.ShakeCamera(.15f, .15f);
+        //GameManager.Instance.ShakeCamera(.15f, .15f);
 
         if (canDropItem)
         {

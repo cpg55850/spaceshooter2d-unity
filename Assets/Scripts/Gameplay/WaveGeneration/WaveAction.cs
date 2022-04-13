@@ -1,16 +1,16 @@
 using UnityEngine;
 
-[System.Serializable]
-public class Enemy
-{
-    public GameObject prefab;
-    public MovementData movementData;
-    public float yPos;
-    public float delay;
-}
+//[System.Serializable]
+//public class Enemy
+//{
+//    public GameObject prefab;
+//    public MovementData movementData;
+//    public float yPos;
+//    public float delay;
+//}
 
 [CreateAssetMenu(fileName = "New WaveAction", menuName = "Waves/WaveAction")]
-public class WaveAction : ScriptableObject
+public class WaveActionz : ScriptableObject
 {
     public GameObject prefab;
     public MovementData movementData;

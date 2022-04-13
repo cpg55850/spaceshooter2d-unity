@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4416167749071149077}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyBulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: -7268023612559647867}
   - component: {fileID: 6919962331352706345}
   - component: {fileID: 7700793063937584170}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyTwo
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -108,8 +108,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2052714393
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ffe59569465ffd9489e3e738656b541e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -167,9 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa73f48f6e9b194e814f31431c2d48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
   damage: 1
-  bounceOnY: 0
 --- !u!114 &673108378358296859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +180,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3802ba474b6a82e4f8a593de6b229e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementData: {fileID: 0}
+  movementData:
+    type: 0
+    speed: 5
+    frequency: 1
+    magnitude: 5
+    offset: 5
 --- !u!114 &3154771933977356614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,8 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 008c36ca8cc67494a878bbfa23e158fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  maxHealth: 0
+  health: 7
+  maxHealth: 5
   deathPrefab: {fileID: 3802571911816236694, guid: 21f44fc01bc43e841a049a517a472481, type: 3}
   hitFlashTime: 0.4
   points: 5

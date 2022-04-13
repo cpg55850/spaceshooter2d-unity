@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93a519de3283ea45a2126f9b23270e3, type: 3}
   m_Name: SinusoidalNormal
   m_EditorClassIdentifier: 
-  speed: 3
-  frequency: 3
+  type: 1
+  speed: 5
+  frequency: 1
   magnitude: 5
   offset: 5
-  type: 0

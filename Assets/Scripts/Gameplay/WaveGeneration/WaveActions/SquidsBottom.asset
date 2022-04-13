@@ -12,31 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bf2f8c4f0fbac4089748967800bc6f, type: 3}
   m_Name: SquidsBottom
   m_EditorClassIdentifier: 
+  prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
+  movementData: {fileID: 11400000, guid: 69cf9949922e8614ebb8ccd5aec0f6bc, type: 2}
   name: Basic Enemies
   delay: 0.25
   enemyDelay: 0.25
-  prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
   spawnCount: 2
   enemies:
   - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
+    movementData: {fileID: 0}
     yPos: -3
     delay: 0
   - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
+    movementData: {fileID: 0}
     yPos: -3
     delay: 0.25
   - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
+    movementData: {fileID: 0}
     yPos: -3
     delay: 0.25
   - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
+    movementData: {fileID: 0}
     yPos: -3
     delay: 0.25
   - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
+    movementData: {fileID: 0}
     yPos: -3
     delay: 0.25
   - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
+    movementData: {fileID: 0}
     yPos: -3
     delay: 0.25
   - prefab: {fileID: 5236034085455841192, guid: ce0c6878e14089e40ba051794aab587a, type: 3}
+    movementData: {fileID: 0}
     yPos: -3
     delay: 0.25
   message: Basic Enemies

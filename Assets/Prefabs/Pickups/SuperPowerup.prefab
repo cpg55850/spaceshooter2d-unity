@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 7928227461889901999}
   - component: {fileID: 7928227461889901992}
   - component: {fileID: 7928227461889901993}
+  - component: {fileID: 126920477156379470}
   - component: {fileID: 7928227461889901994}
+  - component: {fileID: 8146508369430682402}
   m_Layer: 0
   m_Name: SuperPowerup
   m_TagString: Untagged
@@ -132,6 +134,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.74690175, y: 0.7490778}
   m_EdgeRadius: 0
+--- !u!114 &126920477156379470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7928227461889901995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3802ba474b6a82e4f8a593de6b229e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementData:
+    type: 0
+    speed: 0
+    frequency: 1
+    magnitude: 5
+    offset: 5
 --- !u!114 &7928227461889901994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,3 +165,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsToDespawn: 10
+--- !u!114 &8146508369430682402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7928227461889901995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b054977b9f94f74797b2adb51e0241b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftBoundary: 1
+  rightBoundary: 0
+  topBoundary: 0
+  bottomBoundary: 0

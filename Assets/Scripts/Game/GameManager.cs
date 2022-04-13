@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Text healthText;
     public Text waveText;
+    public GameObject pausePanel;
     public float waveTextDuration = 1f;
     public GameObject player;
     public float minX, maxX, minY, maxY;

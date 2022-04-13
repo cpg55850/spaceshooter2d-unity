@@ -2,27 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyThreeController : EnemyController
+public class EnemyThreeController : MonoBehaviour
 {
-    public float frequency = 3f;
-    public float magnitude = 5f;
-    public float offset = 5f;
-    private float yPos;
-    public bool reverseDirection;
-
-    public override void Start()
+    public int damage;
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        base.Start();
-        //offset = Random.Range(0, 361);
-        yPos = 0;
+        if (other.gameObject.GetComponent<Health>() != null && !other.gameObject.CompareTag("Enemy"))
+        {
+            other.gameObject.GetComponent<Health>().TakeDamage(damage);
+            gameObject.GetComponent<Health>().Die();
+        }
     }
 
-    public override void MoveEnemy()
-    {
-        transform.Translate(-speed * Time.deltaTime, Mathf.Sin(yPos + offset) * magnitude * Time.deltaTime, 0);
-        if (reverseDirection)
-            yPos -= (0.1f * frequency);
-        else
-            yPos += (0.1f * frequency);
-    }
 }
