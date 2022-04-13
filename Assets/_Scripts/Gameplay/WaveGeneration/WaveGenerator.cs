@@ -36,7 +36,7 @@ public class WaveGenerator : MonoBehaviour
                                 float objectWidth = enemy.prefab.transform.GetComponent<SpriteRenderer>().bounds.size.x;
                                 float objectHeight = enemy.prefab.transform.GetComponent<SpriteRenderer>().bounds.size.y;
 
-                                float xPos = GameManager.Instance.maxX + (objectWidth / 2);
+                                float xPos = Screen.maxX + (objectWidth / 2);
                                 //float yPos = Random.Range(GameManager.Instance.minY + (objectHeight / 2), GameManager.Instance.maxY - (objectHeight / 2));
                                 float yPos = A.yOffset + enemy.yPos;
                                 if (A.enemyDelay > 0)

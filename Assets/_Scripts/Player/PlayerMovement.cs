@@ -36,8 +36,8 @@ public class PlayerMovement : MonoBehaviour
         Vector2 direction = new Vector2(hor, ver).normalized;
         direction *= speed * Time.deltaTime;
 
-        float xValidPosition = Mathf.Clamp(transform.position.x + direction.x, GameManager.Instance.minX + (objectWidth / 2), GameManager.Instance.maxX - (objectWidth / 2));
-        float yValidPosition = Mathf.Clamp(transform.position.y + direction.y, GameManager.Instance.minY + (objectHeight / 2), GameManager.Instance.maxY - (objectHeight / 2));
+        float xValidPosition = Mathf.Clamp(transform.position.x + direction.x, Screen.minX + (objectWidth / 2), Screen.maxX - (objectWidth / 2));
+        float yValidPosition = Mathf.Clamp(transform.position.y + direction.y, Screen.minY + (objectHeight / 2), Screen.maxY - (objectHeight / 2));
 
         transform.position = new Vector3(xValidPosition, yValidPosition, 0f);
         //Vector2 temp = transform.position;

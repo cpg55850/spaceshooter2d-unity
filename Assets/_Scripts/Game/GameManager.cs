@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public GameObject pausePanel;
     public float waveTextDuration = 1f;
     public GameObject player;
-    public float minX, maxX, minY, maxY;
     public int score = 0;
     public CameraShake cameraShake;
 
@@ -24,7 +23,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        initializeScreenBoundVariables();
         //drawHealth(player.GetComponent<Health>().health);
     }
 
@@ -39,18 +37,6 @@ public class GameManager : MonoBehaviour
     public void ShakeCamera(float duration, float magnitude)
     {
         StartCoroutine(cameraShake.Shake(duration, magnitude));
-    }
-
-    public void initializeScreenBoundVariables()
-    {
-        float camDistance = Vector3.Distance(transform.position, Camera.main.transform.position);
-        Vector2 bottomCorner = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, camDistance));
-        Vector2 topCorner = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, camDistance));
-
-        minX = bottomCorner.x;
-        maxX = topCorner.x;
-        minY = bottomCorner.y;
-        maxY = topCorner.y;
     }
 
     public void IncreaseScore(int amount)

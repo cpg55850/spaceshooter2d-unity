@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour
     private void BounceMovement()
     {
         transform.Translate(-movementData.speed * Time.deltaTime, movementData.speed * yDir * Time.deltaTime, 0);
-        if (transform.position.y >= GameManager.Instance.maxY - (objectHeight / 2) || transform.position.y <= GameManager.Instance.minY + (objectHeight / 2))
+        if (transform.position.y >= Screen.maxY - (objectHeight / 2) || transform.position.y <= Screen.minY + (objectHeight / 2))
         {
             yDir = -yDir;
         }

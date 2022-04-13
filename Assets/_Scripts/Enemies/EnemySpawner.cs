@@ -92,8 +92,8 @@ public class EnemySpawner : MonoBehaviour
         objectWidth = currentEnemy.transform.GetComponent<SpriteRenderer>().bounds.size.x;
         objectHeight = currentEnemy.transform.GetComponent<SpriteRenderer>().bounds.size.y;
 
-        float xPos = GameManager.Instance.maxX + (objectWidth / 2);
-        float yPos = Random.Range(GameManager.Instance.minY + (objectHeight / 2), GameManager.Instance.maxY - (objectHeight / 2));
+        float xPos = Screen.maxX + (objectWidth / 2);
+        float yPos = Random.Range(Screen.minY + (objectHeight / 2), Screen.maxY - (objectHeight / 2));
         Instantiate(currentEnemy, new Vector2(xPos, yPos), Quaternion.identity);
     }
 

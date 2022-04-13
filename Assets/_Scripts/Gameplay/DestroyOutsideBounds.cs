@@ -16,16 +16,16 @@ public class DestroyOutsideBounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.position.x < GameManager.Instance.minX - (objectWidth / 2) && leftBoundary)
+        if (gameObject.transform.position.x < Screen.minX - (objectWidth / 2) && leftBoundary)
         {
             Destroy(gameObject);
-        } else if (gameObject.transform.position.x > GameManager.Instance.maxX + (objectWidth / 2) && rightBoundary)
+        } else if (gameObject.transform.position.x > Screen.maxX + (objectWidth / 2) && rightBoundary)
         {
             Destroy(gameObject);
-        } else if (gameObject.transform.position.y < GameManager.Instance.minY - (objectWidth / 2) && topBoundary)
+        } else if (gameObject.transform.position.y < Screen.minY - (objectWidth / 2) && topBoundary)
         {
             Destroy(gameObject);
-        } else if (gameObject.transform.position.y > GameManager.Instance.maxY + (objectWidth / 2) && bottomBoundary)
+        } else if (gameObject.transform.position.y > Screen.maxY + (objectWidth / 2) && bottomBoundary)
         {
             Destroy(gameObject);
         }
