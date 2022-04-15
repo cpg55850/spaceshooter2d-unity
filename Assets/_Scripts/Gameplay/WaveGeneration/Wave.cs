@@ -25,7 +25,7 @@ public class WaveAction
 {
     public GameObject prefab;
     public MovementData movementData;
-    new public string name;
+    public string name;
     public float delay;
     public float enemyDelay;
     public float speed;

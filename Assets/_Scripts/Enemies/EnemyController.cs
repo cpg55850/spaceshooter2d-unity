@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     {
         if(other.gameObject.GetComponent<Health>() != null && !other.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("Trigger entered");
             other.gameObject.GetComponent<Health>().TakeDamage(damage);
             gameObject.GetComponent<Health>().Die();
         }

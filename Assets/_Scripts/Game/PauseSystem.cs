@@ -24,14 +24,14 @@ public class PauseSystem : MonoBehaviour
 
     void Resume()
     {
-        GameManager.Instance.pausePanel.SetActive(false);
+        UIManager.Instance.pausePanel.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
     void Pause()
     {
-        GameManager.Instance.pausePanel.SetActive(true);
+        UIManager.Instance.pausePanel.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }

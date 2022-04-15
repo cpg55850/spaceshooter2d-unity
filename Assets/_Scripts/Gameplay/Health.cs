@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
     private float t = 0;
     private SpriteRenderer sprite;
 
-    public void Start()
+    public virtual void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
         startColor = sprite.color;
@@ -21,18 +21,10 @@ public class Health : MonoBehaviour
 
     public virtual void TakeDamage(int amount)
     {
-        if(gameObject.tag == "Enemy")
-            FindObjectOfType<AudioManager>().Play("Hit");
-        else if(gameObject.tag == "Player")
-        {
-            FindObjectOfType<AudioManager>().Play("Damage");
-            GameManager.Instance.ShakeCamera(.25f, .25f);
-        }
-
-        StartCoroutine(FlashRed());
         health -= amount;
         if (health <= 0)
             Die();
+        StartCoroutine(FlashRed());
     }
 
     public void addHealth(int amount)
@@ -44,6 +36,8 @@ public class Health : MonoBehaviour
     {
 
         Invoke("DestroyMe", 0.1f);
+        //Instantiate(deathPrefab, gameObject.transform.position, gameObject.transform.rotation);
+        //Destroy(gameObject);
     }
 
     public void DestroyMe()
@@ -55,7 +49,6 @@ public class Health : MonoBehaviour
 
     public IEnumerator FlashRed()
     {
-        Debug.Log("Flash");
         t = 0;
 
         if(!isFlashing)

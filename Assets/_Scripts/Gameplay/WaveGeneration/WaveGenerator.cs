@@ -23,7 +23,7 @@ public class WaveGenerator : MonoBehaviour
                     if(A.message != "")
                     {
                         //Debug.Log(A.message);
-                        StartCoroutine(GameManager.Instance.drawWave(A.message));
+                        //StartCoroutine(UIManager.Instance.drawWave(A.message));
                     }
                     if(A.prefab != null && A.enemies.Length > 0)
                     {

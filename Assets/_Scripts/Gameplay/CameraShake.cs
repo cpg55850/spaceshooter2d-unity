@@ -2,12 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraShake : MonoBehaviour
+public class CameraShake : StaticInstance<CameraShake>
 {
     private bool isShaking;
-    public IEnumerator Shake(float duration, float magnitude)
+
+    protected override void Awake()
     {
-        Debug.Log("Shake!");
+        base.Awake();
+        PlayerHealth.onDamageTaken += PlayerDamageShake;
+    }
+
+    private void OnDestroy()
+    {
+        PlayerHealth.onDamageTaken -= PlayerDamageShake;
+    }
+
+
+    public void PlayerDamageShake(PlayerHealth playerHealth)
+    {
+        StartCoroutine(ShakeCoroutine(.25f, .25f));
+    }
+
+    public IEnumerator ShakeCoroutine(float duration, float magnitude)
+    {
         Vector3 originalPos = transform.localPosition;
 
         float elapsed = 0.0f;

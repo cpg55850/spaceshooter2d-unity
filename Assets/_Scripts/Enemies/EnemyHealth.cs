@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class EnemyHealth : Health
 {
@@ -10,23 +11,34 @@ public class EnemyHealth : Health
     public float dropPercentage = 5f;
     public CameraShake cameraShake;
 
+    public static event Action<EnemyHealth> onEnemyKilled;
+
+    public override void TakeDamage(int amount)
+    {
+        base.TakeDamage(amount);
+        FindObjectOfType<AudioManager>().Play("Hit");
+    }
+
     public override void Die()
     {
         base.Die();
-        GameManager.Instance.IncreaseScore(points);
-        //GameManager.Instance.ShakeCamera(.15f, .15f);
+
+        GameStateManager.Instance.score += points;
+
+        onEnemyKilled?.Invoke(this);
 
         if (canDropItem)
         {
-            float rand = Random.Range(0f, 100f);
+            float rand = UnityEngine.Random.Range(0f, 100f);
             if (rand < dropPercentage)
             {
-                float coinFlip = Random.Range(0, 3);
+                float coinFlip = UnityEngine.Random.Range(0, 3);
                 Debug.Log("Coin Flip: " + coinFlip);
-                if(coinFlip > 1f)
+                if (coinFlip > 1f)
                 {
                     Instantiate(droppableItems[0], transform.position, transform.rotation);
-                } else
+                }
+                else
                 {
                     Instantiate(droppableItems[1], transform.position, transform.rotation);
                 }

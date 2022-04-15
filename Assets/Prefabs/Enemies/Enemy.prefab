@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 5236034085455841195}
   - component: {fileID: 5236034085455841194}
   - component: {fileID: 5236034085455870037}
+  - component: {fileID: 4650348870561033913}
   - component: {fileID: 3154771933977356614}
   - component: {fileID: 5241357154020081346}
   - component: {fileID: 6553614612497284339}
@@ -108,7 +109,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2052714393
-  m_SortingLayer: 3
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d52ea3c1e7c47e8428498481ed56de5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -167,6 +168,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+--- !u!114 &4650348870561033913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5236034085455870036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3802ba474b6a82e4f8a593de6b229e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementData:
+    type: 0
+    speed: 10
+    frequency: 1
+    magnitude: 5
+    offset: 5
 --- !u!114 &3154771933977356614
 MonoBehaviour:
   m_ObjectHideFlags: 0

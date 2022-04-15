@@ -39,7 +39,7 @@ public class EnemySpawner : MonoBehaviour
         //    currentEnemy = enemies[1];
         //}
 
-        if (GameManager.Instance.score >= 400)
+        if (GameStateManager.Instance.score >= 400)
         {
             if (randEnemy > 40f)
             {
@@ -49,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
                     currentEnemy = enemies[2];
             }
         }
-        else if (GameManager.Instance.score >= 300)
+        else if (GameStateManager.Instance.score >= 300)
         {
             if (randEnemy > 50f)
             {
@@ -59,7 +59,7 @@ public class EnemySpawner : MonoBehaviour
                     currentEnemy = enemies[2];
             }
         }
-        else if (GameManager.Instance.score >= 200)
+        else if (GameStateManager.Instance.score >= 200)
         {
             if (randEnemy > 65f)
             {
@@ -69,7 +69,7 @@ public class EnemySpawner : MonoBehaviour
                     currentEnemy = enemies[2];
             }
         }
-        else if (GameManager.Instance.score >= 100)
+        else if (GameStateManager.Instance.score >= 100)
         {
             if (randEnemy > 75f)
             {
@@ -79,7 +79,7 @@ public class EnemySpawner : MonoBehaviour
                     currentEnemy = enemies[2];
             }
         }
-        else if (GameManager.Instance.score >= 50)
+        else if (GameStateManager.Instance.score >= 50)
         {
             if (randEnemy > 75f)
             {
@@ -101,19 +101,19 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            if (GameManager.Instance.score >= 500)
+            if (GameStateManager.Instance.score >= 500)
             {
                 yield return new WaitForSeconds(respawnTime * .3f);
             }
-            else if (GameManager.Instance.score >= 400)
+            else if (GameStateManager.Instance.score >= 400)
             {
                 yield return new WaitForSeconds(respawnTime * .4f);
             }
-            else if (GameManager.Instance.score >= 200)
+            else if (GameStateManager.Instance.score >= 200)
             {
                 yield return new WaitForSeconds(respawnTime*.5f);
             } 
-            else if (GameManager.Instance.score >= 100)
+            else if (GameStateManager.Instance.score >= 100)
             {
                 yield return new WaitForSeconds(respawnTime * .75f);
             } else
