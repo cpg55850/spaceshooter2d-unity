@@ -13,10 +13,8 @@ public abstract class PowerUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
-        {
-            Pickup(collision);
-        }
+
+        Pickup(collision);
     }
 
     public virtual void Pickup(Collider2D player) {

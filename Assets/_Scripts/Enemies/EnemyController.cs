@@ -8,9 +8,8 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.GetComponent<Health>() != null && !other.gameObject.CompareTag("Enemy"))
+        if(other.gameObject.GetComponent<Health>() != null)
         {
-            Debug.Log("Trigger entered");
             other.gameObject.GetComponent<Health>().TakeDamage(damage);
             gameObject.GetComponent<Health>().Die();
         }

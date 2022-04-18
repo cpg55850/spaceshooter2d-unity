@@ -17,8 +17,6 @@ public class PlayerHealth : Health
     public override void TakeDamage(int amount)
     {
         base.TakeDamage(amount);
-        Debug.Log("TakeDamage Func");
-        Debug.Log("Player health (PlayerHealth): " + health);
         FindObjectOfType<AudioManager>().Play("Damage");
         onDamageTaken?.Invoke(this);
     }

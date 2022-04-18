@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 126920477156379470}
   - component: {fileID: 7928227461889901994}
   - component: {fileID: 8146508369430682402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SuperPowerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}

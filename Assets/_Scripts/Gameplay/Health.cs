@@ -34,7 +34,7 @@ public class Health : MonoBehaviour
 
     public virtual void Die()
     {
-
+        GetComponent<Collider2D>().enabled = false;
         Invoke("DestroyMe", 0.1f);
         //Instantiate(deathPrefab, gameObject.transform.position, gameObject.transform.rotation);
         //Destroy(gameObject);

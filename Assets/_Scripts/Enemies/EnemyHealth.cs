@@ -33,7 +33,6 @@ public class EnemyHealth : Health
             if (rand < dropPercentage)
             {
                 float coinFlip = UnityEngine.Random.Range(0, 3);
-                Debug.Log("Coin Flip: " + coinFlip);
                 if (coinFlip > 1f)
                 {
                     Instantiate(droppableItems[0], transform.position, transform.rotation);

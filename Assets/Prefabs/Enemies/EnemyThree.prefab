@@ -182,9 +182,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementData:
     type: 1
-    speed: 10
-    frequency: 1
-    magnitude: 3
+    speed: 8
+    frequency: 3
+    magnitude: 1.5
     offset: 5
 --- !u!114 &3154771933977356614
 MonoBehaviour:

@@ -11,21 +11,15 @@ public class UIManager : StaticInstance<UIManager>
     public GameObject pausePanel;
     public float waveTextDuration = 1f;
 
-    protected override void Awake()
+    private void Start()
     {
-        base.Awake();
+        scoreText.text = GameStateManager.Instance.score.ToString();
         PlayerHealth.onDamageTaken += drawPlayerHealth;
         PlayerHealth.onStart += drawPlayerHealth;
         EnemyHealth.onEnemyKilled += drawPlayerScore;
     }
 
-    private void Start()
-    {
-        Debug.Log("Start! Score: " + GameStateManager.Instance.score.ToString());
-        scoreText.text = GameStateManager.Instance.score.ToString();
-    }
-
-    private void OnDestroy()
+    private void OnDisable()
     {
         PlayerHealth.onDamageTaken -= drawPlayerHealth;
         PlayerHealth.onStart -= drawPlayerHealth;

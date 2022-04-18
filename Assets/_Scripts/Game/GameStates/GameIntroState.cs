@@ -5,7 +5,6 @@ public class GameIntroState : GameBaseState
 {
     public override void EnterState(GameStateManager game)
     {
-        Debug.Log("Intro state!");
     }
 
     public override void UpdateState(GameStateManager game)
