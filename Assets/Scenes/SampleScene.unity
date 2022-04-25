@@ -645,6 +645,11 @@ MonoBehaviour:
     volume: 0.677
     pitch: 1.41
     source: {fileID: 0}
+  - name: Pickup
+    clip: {fileID: 8300000, guid: 17a7a1c51504def44a4486e028859483, type: 3}
+    volume: 0.493
+    pitch: 1
+    source: {fileID: 0}
 --- !u!4 &133656369
 Transform:
   m_ObjectHideFlags: 0
@@ -3734,9 +3739,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9220993179594177097, guid: b29e8c2deb31f91478599552e940fcd6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f6789250ab8262746a0e853bbb1233a8, type: 3}
     - target: {fileID: 9220993179594177099, guid: b29e8c2deb31f91478599552e940fcd6, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b29e8c2deb31f91478599552e940fcd6, type: 3}

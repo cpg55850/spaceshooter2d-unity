@@ -13,7 +13,7 @@ public abstract class PowerUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        FindObjectOfType<AudioManager>().Play("Pickup");
         Pickup(collision);
     }
 
