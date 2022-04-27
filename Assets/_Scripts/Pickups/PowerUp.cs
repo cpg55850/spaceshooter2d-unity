@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public abstract class PowerUp : MonoBehaviour
 {
@@ -9,16 +10,6 @@ public abstract class PowerUp : MonoBehaviour
     private void Start()
     {
         Invoke("Exit", secondsToDespawn);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        FindObjectOfType<AudioManager>().Play("Pickup");
-        Pickup(collision);
-    }
-
-    public virtual void Pickup(Collider2D player) {
-        Exit();
     }
 
     public virtual void Exit()

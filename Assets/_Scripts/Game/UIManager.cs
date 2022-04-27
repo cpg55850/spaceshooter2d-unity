@@ -13,25 +13,25 @@ public class UIManager : StaticInstance<UIManager>
 
     private void Start()
     {
+        Debug.Log(GameStateManager.Instance.score.ToString());
         scoreText.text = GameStateManager.Instance.score.ToString();
         PlayerHealth.onDamageTaken += drawPlayerHealth;
-        PlayerHealth.onStart += drawPlayerHealth;
-        EnemyHealth.onEnemyKilled += drawPlayerScore;
+        HealthPowerUp.onGetHealth += drawPlayerHealth;
     }
 
     private void OnDisable()
     {
         PlayerHealth.onDamageTaken -= drawPlayerHealth;
-        PlayerHealth.onStart -= drawPlayerHealth;
-        EnemyHealth.onEnemyKilled -= drawPlayerScore;
+        HealthPowerUp.onGetHealth -= drawPlayerHealth;
     }
 
-    public void drawPlayerScore(EnemyHealth enemyHealth)
+    public void drawPlayerScore()
     {
+        Debug.Log("draw Player score");
         scoreText.text = GameStateManager.Instance.score.ToString();
     }
 
-    public void drawPlayerHealth(PlayerHealth playerHealth)
+    public void drawPlayerHealth(Health playerHealth)
     {
         string healthString = "";
         for (int i = 0; i < playerHealth.health; i++)

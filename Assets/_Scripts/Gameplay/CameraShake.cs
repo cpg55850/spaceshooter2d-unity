@@ -18,7 +18,7 @@ public class CameraShake : StaticInstance<CameraShake>
     }
 
 
-    public void PlayerDamageShake(PlayerHealth playerHealth)
+    public void PlayerDamageShake(Health playerHealth)
     {
         StartCoroutine(ShakeCoroutine(.25f, .25f));
     }

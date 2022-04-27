@@ -11,8 +11,6 @@ public class EnemyHealth : Health
     public float dropPercentage = 5f;
     public CameraShake cameraShake;
 
-    public static event Action<EnemyHealth> onEnemyKilled;
-
     public override void TakeDamage(int amount)
     {
         base.TakeDamage(amount);
@@ -24,8 +22,6 @@ public class EnemyHealth : Health
         base.Die();
 
         GameStateManager.Instance.score += points;
-
-        onEnemyKilled?.Invoke(this);
 
         if (canDropItem)
         {

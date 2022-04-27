@@ -5,19 +5,17 @@ using System;
 
 public class PlayerHealth : Health
 {
-    public static event Action<PlayerHealth> onDamageTaken;
-    public static event Action<PlayerHealth> onStart;
+    public static event Action<Health> onDamageTaken;
 
     public override void Start()
     {
         base.Start();
-        onStart?.Invoke(this);
     }
 
     public override void TakeDamage(int amount)
     {
         base.TakeDamage(amount);
         FindObjectOfType<AudioManager>().Play("Damage");
-        onDamageTaken?.Invoke(this);
+        onDamageTaken?.Invoke(GetComponent<Health>());
     }
 }
