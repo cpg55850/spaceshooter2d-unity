@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea8aeca6cbac1f4b8224818e5aedde2, type: 3}
+  m_Name: Alien2EnemyData
+  m_EditorClassIdentifier: 
+  damage: 1
+  points: 10
+  canDropItem: 1
+  droppableItems:
+  - {fileID: 7125311741611092510, guid: cc81fb986930c4244a666c4c4c8099ab, type: 3}
+  - {fileID: 7928227461889901995, guid: e1758637fc1ffd04cbc78d70b2f9fd86, type: 3}
+  dropPercentage: 5

@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa73f48f6e9b194e814f31431c2d48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  enemyData: {fileID: 11400000, guid: ed9ad1a7252f8904881049f12ee727ff, type: 2}
 --- !u!114 &673108378358296859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,12 +202,6 @@ MonoBehaviour:
   maxHealth: 1
   deathPrefab: {fileID: 3802571911816236694, guid: 21f44fc01bc43e841a049a517a472481, type: 3}
   hitFlashTime: 0.4
-  points: 5
-  canDropItem: 1
-  droppableItems:
-  - {fileID: 7125311741611092510, guid: cc81fb986930c4244a666c4c4c8099ab, type: 3}
-  dropPercentage: 5
-  cameraShake: {fileID: 0}
 --- !u!114 &5241357154020081346
 MonoBehaviour:
   m_ObjectHideFlags: 0

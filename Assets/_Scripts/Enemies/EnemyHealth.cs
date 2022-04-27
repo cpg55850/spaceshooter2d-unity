@@ -5,11 +5,6 @@ using System;
 
 public class EnemyHealth : Health
 {
-    public int points;
-    public bool canDropItem;
-    public GameObject[] droppableItems;
-    public float dropPercentage = 5f;
-
     public static event Action<Health> onEnemyKilled;
 
     public override void TakeDamage(int amount)
@@ -21,24 +16,25 @@ public class EnemyHealth : Health
     public override void Die()
     {
         base.Die();
+        EnemyData enemyData = GetComponent<EnemyController>().enemyData;
 
-        GameStateManager.Instance.score += points;
+        GameStateManager.Instance.score += enemyData.points;
         
         onEnemyKilled?.Invoke(this);
 
-        if (canDropItem)
+        if (enemyData.canDropItem)
         {
             float rand = UnityEngine.Random.Range(0f, 100f);
-            if (rand < dropPercentage)
+            if (rand < enemyData.dropPercentage)
             {
                 float coinFlip = UnityEngine.Random.Range(0, 3);
                 if (coinFlip > 1f)
                 {
-                    Instantiate(droppableItems[0], transform.position, transform.rotation);
+                    Instantiate(enemyData.droppableItems[0], transform.position, transform.rotation);
                 }
                 else
                 {
-                    Instantiate(droppableItems[1], transform.position, transform.rotation);
+                    Instantiate(enemyData.droppableItems[1], transform.position, transform.rotation);
                 }
             }
         }
