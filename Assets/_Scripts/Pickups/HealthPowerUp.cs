@@ -13,6 +13,7 @@ public class HealthPowerUp : PowerUp
         Debug.Log("Triggered a health powerup");
         player.GetComponent<Health>().addHealth(amount);
         onGetHealth?.Invoke(player.GetComponent<Health>());
-        base.Exit();
+        PlayDefaultSFX();
+        Exit();
     }
 }

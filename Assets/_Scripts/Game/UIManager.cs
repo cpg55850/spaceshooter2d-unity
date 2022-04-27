@@ -11,28 +11,33 @@ public class UIManager : StaticInstance<UIManager>
     public GameObject pausePanel;
     public float waveTextDuration = 1f;
 
-    private void Start()
+    private void OnEnable()
     {
-        Debug.Log(GameStateManager.Instance.score.ToString());
-        scoreText.text = GameStateManager.Instance.score.ToString();
+        PlayerHealth.onStart += drawPlayerHealth;
         PlayerHealth.onDamageTaken += drawPlayerHealth;
         HealthPowerUp.onGetHealth += drawPlayerHealth;
+        EnemyHealth.onEnemyKilled += drawPlayerScore;
     }
 
     private void OnDisable()
     {
+        PlayerHealth.onStart -= drawPlayerHealth;
         PlayerHealth.onDamageTaken -= drawPlayerHealth;
         HealthPowerUp.onGetHealth -= drawPlayerHealth;
+        EnemyHealth.onEnemyKilled -= drawPlayerScore;
     }
 
-    public void drawPlayerScore()
+    public void drawPlayerScore(Health health)
     {
         Debug.Log("draw Player score");
+
         scoreText.text = GameStateManager.Instance.score.ToString();
     }
 
     public void drawPlayerHealth(Health playerHealth)
     {
+        Debug.Log("draw Player health");
+        Debug.Log(playerHealth.health);
         string healthString = "";
         for (int i = 0; i < playerHealth.health; i++)
         {

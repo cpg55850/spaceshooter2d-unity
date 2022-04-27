@@ -8,6 +8,8 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerDefaultState DefaultState = new PlayerDefaultState();
     public PlayerSuperState SuperState = new PlayerSuperState();
 
+    public int score = 0;
+
     // Start is called before the first frame update
     void Start()
     {

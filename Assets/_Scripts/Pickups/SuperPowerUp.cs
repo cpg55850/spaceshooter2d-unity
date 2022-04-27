@@ -8,5 +8,6 @@ public class SuperPowerUp : PowerUp
     {
         PlayerStateManager playerStateManager = player.GetComponent<PlayerStateManager>();
         playerStateManager.SwitchState(playerStateManager.SuperState);
+        PlayDefaultSFX();
     }
 }

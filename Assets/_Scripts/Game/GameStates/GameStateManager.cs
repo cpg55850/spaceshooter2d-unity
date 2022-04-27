@@ -24,11 +24,6 @@ public class GameStateManager : StaticInstance<GameStateManager>
     void Update()
     {
         currentState.UpdateState(this);
-
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            Debug.Log(score);
-        }
     }
 
     public void SwitchState(GameBaseState state)

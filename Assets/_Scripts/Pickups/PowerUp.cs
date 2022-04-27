@@ -12,6 +12,11 @@ public abstract class PowerUp : MonoBehaviour
         Invoke("Exit", secondsToDespawn);
     }
 
+    public void PlayDefaultSFX()
+    {
+        FindObjectOfType<AudioManager>().Play("Pickup");
+    }
+
     public virtual void Exit()
     {
         Destroy(gameObject);
